@@ -10,15 +10,22 @@ class TestEnglishToFrench(unittest.TestCase):
         self.assertEqual(englishtofrench("Welcome"),"Bienvenue")
         self.assertEqual(englishtofrench("Love"),"Amour")
         #self.assertEqual(englishtofrench(""),"error")
+    def test2(self):
+        """ This is the 2nd test """
+        self.assertNotEqual(englishtofrench("A"),"Bonjour")
+        #self.assertEqual(englishtofrench(""),"error")    
 
 class TestFrenchToEnglish(unittest.TestCase):
     """ This is where you test french translate to english """
-    def test2(self):
+    def test1(self):
         """ This is the 1st test """
         self.assertEqual(frenchtoenglish("Bonjour"),"Hello")
         self.assertEqual(frenchtoenglish("Bienvenue"),"Welcome")
         self.assertEqual(frenchtoenglish("Amour"),"Love")
         #self.assertEqual(englishtofrench(""),"error")
+    def test2(self):
+        """ This is the 2nd test """
+        self.assertNotEqual(frenchtoenglish("A"),"Hello")    
 
 class TestEnglishToGerman(unittest.TestCase):
     """This is where you test english translate to german"""

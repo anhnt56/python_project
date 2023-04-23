@@ -15,13 +15,13 @@ url_lt='https://api.jp-tok.language-translator.watson.cloud.ibm.com/instances/1b
 apikey_lt='WgPhFyYQymJ-sqZfdNf3YGMxMm2Qv8QKKBtYKb6NA-kv'
 version_lt='2023-04-23'
 
-authenticator = IAMAuthenticator('{apikey}')
+authenticator = IAMAuthenticator(apikey_lt)
 language_translator = LanguageTranslatorV3(
-    version='{version}',
+    version=version_lt,
     authenticator=authenticator
 )
 
-language_translator.set_service_url('{url}')
+language_translator.set_service_url(url_lt)
 
 def englishtofrench(word):
     """This class does english to french translation"""
